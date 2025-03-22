@@ -47,6 +47,20 @@ document.querySelector('.ouvidoria-form').addEventListener('submit', function (e
     this.reset();
 });
 
+// Valida o telefone
+document.getElementById('telefone').addEventListener('input', function (e) {
+    let telefone = e.target.value.replace(/\D/g, '');
+
+    if (telefone.length > 2) {
+        telefone = `(${telefone.substring(0, 2)}) ${telefone.substring(2)}`;
+    }
+    if (telefone.length > 10) {
+        telefone = `${telefone.substring(0, 10)}-${telefone.substring(10, 14)}`;
+    }
+
+    e.target.value = telefone;
+});
+
 window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
