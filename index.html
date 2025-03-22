@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>⚕️HBLEM Itabuna</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo-hblem.png" alt="Logo HBLEM">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#ouvidoria">Ouvidoria</a></li>
+            </ul>
+        </nav>
+        <button class="menu-mobile">☰</button>
+    </header>
+
+    <section id="home">
+        <h1>Hospital de Base Luís Eduardo Magalhães</h1>
+        <p>Referência em saúde no sul da Bahia.</p>
+    </section>
+
+    <section id="sobre">
+        <div class="sobre-container">
+            <div class="sobre-imagem">
+                <img src="sobre-nos.jpg" alt="Imagem Sobre Nós">
+            </div>
+            <div class="sobre-texto">
+                <h5>SOBRE</h5>
+                <h2>O Hospital</h2>
+                <p>Fundado em 27 de setembro de 1998 em Itabuna, o Hospital de Base Luís Eduardo Magalhães, é uma instituição de gestão municipal, “Portas Abertas” para urgência e emergência e atendimento 100% SUS. <br><br>Administrada pela Fundação de Atenção à Saúde de Itabuna (FASI), a unidade hospitalar é considerada como um dos mais importantes equipamentos públicos de saúde do interior da Bahia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico servico-emergencia">
+                <h3>Emergência 24h</h3>
+                <p>Atendimento de urgência e emergência.</p>
+            </div>
+            <div class="servico servico-cirurgias">
+                <h3>Cirurgias</h3>
+                <p>Procedimentos cirúrgicos de alta complexidade.</p>
+            </div>
+            <div class="servico servico-exames">
+                <h3>Exames</h3>
+                <p>Diagnóstico por imagem e laboratorial.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="noticias">
+        <h2>Notícias</h2>
+        <div class="noticias-container">
+            <div class="noticia">
+                <p>O Hospital de Base Luís Eduardo Magalhães (HBLEM) foi ampliado e a nova estrutura foi entregue nesta sexta-feira (14), pelo governador Jerônimo Rodrigues, acompanhado do ministro da Casa Civil, Rui Costa, e da secretária da Saúde, Roberta Santana.<br><br>A unidade, referência macrorregional para 22 municípios da região, agora conta com mais 20 leitos de UTI, seis novas salas cirúrgicas, adequação da área de imagem com a implantação de um novo tomógrafo e raio-X, e a ampliação da emergência, que passa a contar com oito leitos de observação, três leitos de sala vermelha e quatro leitos de sala amarela.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ouvidoria">
+        <div class="ouvidoria-container">
+            <div class="ouvidoria-imagem">
+                <img src="ouvidoria.jpg" alt="Imagem Ouvidoria">
+            </div>
+            <div class="ouvidoria-formulario">
+                <h5>OUVIDORIA</h5>
+                <h2>Fale conosco</h2>
+                <form class="ouvidoria-form">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu melhor e-mail" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" placeholder="00 00000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" placeholder="Digite o assunto" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Digite a sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit">ENVIAR</button>
+                </form>
+                <!-- Mensagem de feedback -->
+                <div id="form-message" class="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HBLEM. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
