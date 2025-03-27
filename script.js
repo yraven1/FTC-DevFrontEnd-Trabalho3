@@ -1,3 +1,4 @@
+// Menu de Navegação
 function toggleMenu() {
     const nav = document.querySelector('nav ul');
     nav.classList.toggle('active');
@@ -5,21 +6,18 @@ function toggleMenu() {
 
 document.querySelector('.menu-mobile').addEventListener('click', toggleMenu);
 
-// Validação do formulário de ouvidoria
+// Formulário de ouvidoria
 document.querySelector('.ouvidoria-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Seleciona os campos do formulário
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
     const telefone = document.getElementById('telefone').value.trim();
     const assunto = document.getElementById('assunto').value.trim();
     const mensagem = document.getElementById('mensagem').value.trim();
-
-    // Seleciona a div de mensagem
     const formMessage = document.getElementById('form-message');
 
-    // Validação básica
+    // Validação de dados
     if (!nome || !email || !telefone || !assunto || !mensagem) {
         formMessage.textContent = 'Por favor, preencha todos os campos.';
         formMessage.classList.remove('success');
@@ -27,8 +25,7 @@ document.querySelector('.ouvidoria-form').addEventListener('submit', function (e
         formMessage.style.display = 'block';
         return;
     }
-
-    // Validação de e-mail simples
+    
     if (!email.includes('@') || !email.includes('.')) {
         formMessage.textContent = 'Por favor, insira um e-mail válido.';
         formMessage.classList.remove('success');
@@ -37,17 +34,15 @@ document.querySelector('.ouvidoria-form').addEventListener('submit', function (e
         return;
     }
 
-    // Se tudo estiver válido, exibe mensagem de sucesso
+    // Se válido, exibe mensagem de sucesso
     formMessage.textContent = 'Mensagem enviada com sucesso!';
     formMessage.classList.remove('error');
     formMessage.classList.add('success');
     formMessage.style.display = 'block';
-
-    // Limpa o formulário após o envio
     this.reset();
 });
 
-// Valida o telefone
+// Validação do telefone
 document.getElementById('telefone').addEventListener('input', function (e) {
     let telefone = e.target.value.replace(/\D/g, '');
 
@@ -61,6 +56,7 @@ document.getElementById('telefone').addEventListener('input', function (e) {
     e.target.value = telefone;
 });
 
+// Move o menu de navegação com a página
 window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
