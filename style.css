@@ -145,7 +145,7 @@ section {
 .servico {
     flex: 1 1 30%;
     margin: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
