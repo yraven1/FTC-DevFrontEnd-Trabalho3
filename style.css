@@ -204,6 +204,7 @@ section {
     text-align: center;
     padding: 8rem 10%;
     position: relative;
+    margin-bottom: 3rem;
 }
 
 #noticias::before {
@@ -235,6 +236,8 @@ section {
 #localizacao {
     padding: 0;
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .localizacao-container {
